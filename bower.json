@@ -24,6 +24,9 @@
     "bootstrap": "~3.3.6",
     "angular": "~1.5.3",
     "angular-route": "~1.5.3",
-    "angular-resource": "~1.5.3"
+    "angular-resource": "~1.5.3",
+    "jquery-ui": "^1.11.4",
+    "jquery": "^2.2.3",
+    "metisMenu": "^2.5.0"
   }
 }

@@ -8,6 +8,8 @@ function config($translateProvider) {
         .translations('en', {
 
             // Define all menu elements
+            PRODUTOS: 'Produtos',
+            LISTA_PRODUTOS: 'Lista Produtos',
             DASHBOARD: 'Dashboard',
             GRAPHS: 'Graphs',
             MAILBOX: 'Mailbox',

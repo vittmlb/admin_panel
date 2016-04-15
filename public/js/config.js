@@ -20,11 +20,42 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
     });
 
     $stateProvider
-
+        .state('produtos', {
+            abstract: true,
+            url: "/produtos",
+            templateUrl: "views/common/content.html",
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            files: ['js/plugins/footable/footable.all.min.js', 'css/plugins/footable/footable.core.css']
+                        },
+                        {
+                            name: 'ui.footable',
+                            files: ['js/plugins/footable/angular-footable.js']
+                        }
+                    ]);
+                }
+            }
+        })
+        .state('produtos.list', {
+            url: "/produtos/lista",
+            templateUrl: "js/produtos/views/ecommerce_product_list.html",
+            data: { pageTitle: 'Lista Produtos' }
+            // resolve: {
+            //     loadPlugin: function ($ocLazyLoad) {
+            //         return $ocLazyLoad.load([
+            //             {
+            //                 files: ['css/plugins/iCheck/custom.css','js/plugins/iCheck/icheck.min.js']
+            //             }
+            //         ]);
+            //     }
+            // }
+        })
         .state('dashboards', {
             abstract: true,
             url: "/dashboards",
-            templateUrl: "views/common/content.html",
+            templateUrl: "views/common/content.html"
         })
         .state('dashboards.dashboard_main', {
             url: "/dashboard_main",

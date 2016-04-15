@@ -1,0 +1,35 @@
+<section data-ng-controller="ProdutosController">
+    <h1>Novo Produto</h1>
+    <form data-ng-submit="create()" novalidate>
+        <div class="container">
+            <label for="nome">Nome</label>
+            <div class="form-group">
+                <input type="text" class="form-control" id="nome" data-ng-model="nome" placeholder="Nome" required>
+            </div>
+        </div>
+        <div class="container">
+            <label for="modelo">Modelo</label>
+            <div class="form-group">
+                <input type="text" class="form-control" id="modelo" data-ng-model="modelo" placeholder="Modelo">
+            </div>
+        </div>
+        <div class="container">
+            <label for="descricao">Descrição</label>
+            <div class="form-group">
+                <input type="text" class="form-control" id="descricao" data-ng-model="descricao" placeholder="Descrição do Produto">
+            </div>
+        </div>
+        <div class="container">
+            <label for="preco_usd">Preço (USD)</label>
+            <div class="form-group">
+                <input type="text" class="form-control" id="preco_usd" data-ng-model="preco_usd" placeholder="Preço em Dólar">
+            </div>
+        </div>
+        <div class="container">
+            <input type="submit" class="btn btn-info pull-right" value="Cadastrar">
+        </div>
+        <div class="container" data-ng-show="error">
+            <strong data-ng-bind="error"></strong>
+        </div>
+    </form>
+</section>

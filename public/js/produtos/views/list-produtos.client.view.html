@@ -1,0 +1,16 @@
+<section class="container" data-ng-controller="ProdutosController" data-ng-init="find()">
+    <h1>Produtos</h1>
+    <ul class="list-group">
+        <li class="list-group-item" data-ng-repeat="produto in produtos">
+            <a data-ng-href="#!/produtos/{{produtos._id}}" data-ng-bind="produto.nome"></a>
+            <br>
+            <small data-ng-bind="produto.created | date:'medium'"></small>
+            <small>/</small>
+            <small data-ng-bind="produto.preco_usd | currency: 'U$ '"></small>
+            <p data-ng-bind="produto.descricao"></p>
+        </li>
+    </ul>
+    <div class="container" data-ng-hide="!produtos || produtos.length">
+        Ainda não há times. Porque não <a href="/#!/produtos/create">cria um</a>
+    </div>
+</section>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alow</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+<main>
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">New Imp App</a>
+            </div>
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Produtos <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/#!/produtos">Lista Produtos</a></li>
+                            <li><a href="/#!/produtos/create">Criar Produto</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Estudos <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/#!/estudos">Teste Estudos</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form action="" class="navbar-form pull-right">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="search">
+                    </div>
+                    <button class="btn btn-default">Og</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    {{#each messages}}
+        <div class="alert alert-warning alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            {{this}}
+        </div>
+    {{/each}}
+    {{{body}}}
+    <section class="container">
+        <section ng-view></section>
+    </section>
+</main>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./produtos/produtos.client.module.js"></script>
+<script src="./produtos/controllers/produtos.client.controller.js"></script>
+<script src="./produtos/services/produtos.client.service.js"></script>
+<script src="./produtos/config/produtos.client.routes.js"></script>
+<script src="./estudos/estudos.client.module.js"></script>
+<script src="./estudos/config/estudos.client.routes.js"></script>
+<script src="./estudos/controllers/estudos.client.controller.js"></script>
+<script src="./estudos/services/estudos.client.service.js"></script>
+<script src="./application.js"></script>
+</body>
+</html>

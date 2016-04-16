@@ -1,0 +1,317 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Product edit</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a>E-commerce</a>
+            </li>
+            <li class="active">
+                <strong>Product edit</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+
+    <div class="row" data-ng-controller="ProdutosController">
+
+        <div class="col-lg-12">
+            <div class="tabs-container">
+                    <tabset>
+                        <tab>
+                            <tab-heading>
+                                Dados do Produto
+                            </tab-heading>
+                            <div class="panel-body">
+                                <form data-ng-submit="create()" novalidate>
+                                <fieldset class="form-horizontal">
+                                    <div class="form-group"><label class="col-sm-2 control-label">Nome:</label>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="Nome do Produto" id="nome" data-ng-model="nome"></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Modelo:</label>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="Modelo do Produto" id="modelo" data-ng-model="modelo"></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Preço:</label>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="Preço em USD" id="preco_usd" data-ng-model="preco_usd"></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Descrição</label>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="Descrição do Produto" id="descricao" data-ng-model="descricao"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-12"><input type="submit" class="btn btn-info pull-right" value="Cadastrar"></div>
+                                    </div>
+                                </fieldset>
+                                    </form>
+                            </div>
+                        </tab>
+                        <tab>
+                            <tab-heading>
+                                Data
+                            </tab-heading>
+                            <form data-ng-submit="create()" novalidate>
+                            <div class="panel-body">
+                                <fieldset class="form-horizontal">
+                                    <div class="form-group"><label class="col-sm-2 control-label">ID:</label>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="543"></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Model:</label>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="..."></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Location:</label>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="location"></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Tax Class:</label>
+                                        <div class="col-sm-10">
+                                            <select class="form-control" >
+                                                <option>option 1</option>
+                                                <option>option 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Quantity:</label>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="Quantity"></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Minimum quantity:</label>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="2"></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Sort order:</label>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="0"></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Status:</label>
+                                        <div class="col-sm-10">
+                                            <select class="form-control" >
+                                                <option>option 1</option>
+                                                <option>option 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            </form>
+                        </tab>
+                        <tab>
+                            <tab-heading>
+                                Images
+                            </tab-heading>
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-stripped">
+                                        <thead>
+                                        <tr>
+                                            <th>
+                                                Image preview
+                                            </th>
+                                            <th>
+                                                Image url
+                                            </th>
+                                            <th>
+                                                Sort order
+                                            </th>
+                                            <th>
+                                                Actions
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <img src="img/gallery/2s.jpg">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" disabled value="http://mydomain.com/images/image1.png">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" value="1">
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-white"><i class="fa fa-trash"></i> </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="img/gallery/1s.jpg">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" disabled value="http://mydomain.com/images/image2.png">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" value="2">
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-white"><i class="fa fa-trash"></i> </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="img/gallery/3s.jpg">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" disabled value="http://mydomain.com/images/image3.png">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" value="3">
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-white"><i class="fa fa-trash"></i> </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="img/gallery/4s.jpg">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" disabled value="http://mydomain.com/images/image4.png">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" value="4">
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-white"><i class="fa fa-trash"></i> </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="img/gallery/5s.jpg">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" disabled value="http://mydomain.com/images/image5.png">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" value="5">
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-white"><i class="fa fa-trash"></i> </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="img/gallery/6s.jpg">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" disabled value="http://mydomain.com/images/image6.png">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" value="6">
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-white"><i class="fa fa-trash"></i> </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="img/gallery/7s.jpg">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" disabled value="http://mydomain.com/images/image7.png">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" value="7">
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-white"><i class="fa fa-trash"></i> </button>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </tab>
+                    </tabset>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+
+
+    <div class="ibox-content m-b-sm border-bottom">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="control-label" for="product_name">Product Name</label>
+                    <input type="text" id="product_name" name="product_name" value="" placeholder="Product Name" class="form-control">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="control-label" for="price">Price</label>
+                    <input type="text" id="price" name="price" value="" placeholder="Price" class="form-control">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="control-label" for="quantity">Quantity</label>
+                    <input type="text" id="quantity" name="quantity" value="" placeholder="Quantity" class="form-control">
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="control-label" for="status">Status</label>
+                    <select name="status" id="status" class="form-control">
+                        <option value="1" selected>Enabled</option>
+                        <option value="0">Disabled</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox">
+                <div class="ibox-content">
+
+                    <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="15"  data-ng-controller="ProdutosController" data-ng-init="find()">
+                        <thead>
+                        <tr>
+
+                            <th data-toggle="true">Product Name</th>
+                            <th data-hide="phone">Model</th>
+                            <th data-hide="all">Description</th>
+                            <th data-hide="phone">Price</th>
+                            <th data-hide="phone,tablet" >Quantity</th>
+                            <th data-hide="phone">Status</th>
+                            <th class="text-right" data-sort-ignore="true">Action</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr data-ng-repeat="produto in produtos">
+                            <td data-ng-bind="produto.nome"></td>
+                            <td data-ng-bind="produto.modelo"></td>
+                            <td data-ng-bind="produto.descricao"></td>
+                            <td data-ng-bind="produto.preco_usd | currency: 'U$ '"></td>
+                            <td>0</td>
+                            <td>
+                                <span class="label label-primary">Enable</span>
+                            </td>
+                            <td class="text-right">
+                                <div class="btn-group">
+                                    <button class="btn-white btn btn-xs">View</button>
+                                    <button class="btn-white btn btn-xs">Edit</button>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td colspan="6">
+                                <ul class="pagination pull-right"></ul>
+                            </td>
+                        </tr>
+                        </tfoot>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

@@ -39,7 +39,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             }
         })
         .state('produtos.list', {
-            url: "/produtos/lista",
+            url: "/list",
             templateUrl: "js/produtos/views/ecommerce_product_list.html",
             data: { pageTitle: 'Lista Produtos' }
             // resolve: {
@@ -51,6 +51,24 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             //         ]);
             //     }
             // }
+        })
+        .state('produtos.create', {
+            url: "/create",
+            templateUrl: "js/produtos/views/ecommerce_product.html",
+            data: { pageTitle: 'Criar Produto' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            files: ['css/plugins/summernote/summernote.css','css/plugins/summernote/summernote-bs3.css','js/plugins/summernote/summernote.min.js']
+                        },
+                        {
+                            name: 'summernote',
+                            files: ['css/plugins/summernote/summernote.css','css/plugins/summernote/summernote-bs3.css','js/plugins/summernote/summernote.min.js','js/plugins/summernote/angular-summernote.min.js']
+                        }
+                    ]);
+                }
+            }
         })
         .state('dashboards', {
             abstract: true,

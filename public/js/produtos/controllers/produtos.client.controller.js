@@ -11,7 +11,8 @@ angular.module('produtos').controller('ProdutosController', ['$scope', '$routePa
                 preco_usd: this.preco_usd
             });
             produto.$save(function (response) {
-                $location.path('produtos/' + response._id);
+                // $location.path('produtos/' + response._id);
+                $location.path('www.oantagonista.com');
             }, function (errorResponse) {
                 $scope.error = errorResponse.data.message;
             });

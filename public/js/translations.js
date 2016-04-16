@@ -10,6 +10,7 @@ function config($translateProvider) {
             // Define all menu elements
             PRODUTOS: 'Produtos',
             LISTA_PRODUTOS: 'Lista Produtos',
+            CRIA_PRODUTOS: 'Cria Produtos',
             DASHBOARD: 'Dashboard',
             GRAPHS: 'Graphs',
             MAILBOX: 'Mailbox',
